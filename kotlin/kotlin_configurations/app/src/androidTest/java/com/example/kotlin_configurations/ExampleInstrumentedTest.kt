@@ -21,6 +21,8 @@ import org.junit.Assert.*
 class ExampleInstrumentedTest {
     @Test
     fun useAppContext() {
+        System.setProperty("kotlinx.coroutines.debug", "on" )
+
         Log.d("lh", "1 ========test1")
         // 启动协程执行后台任务
 
@@ -28,7 +30,7 @@ class ExampleInstrumentedTest {
             val result = fetchData()
             Log.d("lh", "3 ========launch 1 当前线程名字${Thread.currentThread().name}")
             Log.d("lh", "4 ========launch 2 当前线程名字${Thread.currentThread().name}")
-            Log.d("lh", "4 ========launch 2 当前线程名字${Thread.currentThread().name}")
+            Log.d("lh", "7 ========result结果是 $result")
         }
         Log.d("lh", "2 ========test1")
     }
