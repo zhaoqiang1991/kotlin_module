@@ -1,6 +1,7 @@
 package com.example.kotlin_configurations
 
 import android.util.Log
+import androidx.lifecycle.lifecycleScope
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import kotlinx.coroutines.Dispatchers
@@ -33,6 +34,7 @@ class ExampleInstrumentedTest {
             Log.d("lh", "7 ========result结果是 $result")
         }
         Log.d("lh", "2 ========test1")
+
     }
 
     private suspend fun fetchData(): String {
